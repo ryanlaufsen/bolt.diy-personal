@@ -110,7 +110,7 @@ export async function streamText(props: {
   const dynamicMaxTokens = modelDetails && modelDetails.maxTokenAllowed ? modelDetails.maxTokenAllowed : MAX_TOKENS;
 
   let systemPrompt =
-    PromptLibrary.getPropmtFromLibrary(promptId || 'default', {
+    PromptLibrary.getPromptFromLibrary(promptId || 'default', {
       cwd: WORK_DIR,
       allowedHtmlElements: allowedHTMLElements,
       modificationTagName: MODIFICATIONS_TAG_NAME,
@@ -126,7 +126,7 @@ export async function streamText(props: {
 
     systemPrompt = `${systemPrompt}
 
-Below is the artifact containing the context loaded into context buffer for you to have knowledge of and might need changes to fullfill current user request.
+Below is the artifact containing the context loaded into context buffer for you to have knowledge of and might need changes to fulfill current user request.
 CONTEXT BUFFER:
 ---
 ${codeContext}
@@ -135,7 +135,7 @@ ${codeContext}
 
     if (summary) {
       systemPrompt = `${systemPrompt}
-      below is the chat history till now
+      Below is the chat history until now
 CHAT SUMMARY:
 ---
 ${props.summary}

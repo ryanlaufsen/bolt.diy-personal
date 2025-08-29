@@ -632,7 +632,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         <div className="text-xs text-bolt-elements-textTertiary">
                           Use <kbd className="kdb px-1.5 py-0.5 rounded bg-bolt-elements-background-depth-2">Shift</kbd>{' '}
                           + <kbd className="kdb px-1.5 py-0.5 rounded bg-bolt-elements-background-depth-2">Return</kbd>{' '}
-                          a new line
+                          to start a new line
                         </div>
                       ) : null}
                       <SupabaseConnection />
